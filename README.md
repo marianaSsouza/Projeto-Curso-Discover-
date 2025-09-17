@@ -12,9 +12,9 @@
 - A soma desses pesos será levada em consideração, assim cada declaração será mais específica.
 - Os tipos de especificação são <u>#id</u>, <u>.class</u>, <u>element</u>
 
-> ![especificidade #id](./img-notion/especificidade-id.png)
-> ![especificidade .class](./img-notion/especificade-class.png)
-> ![especificidade element](./img-notion/especificidade-element.png)
+![especificidade #id](./img-notion/especificidade-id.png)
+![especificidade .class](./img-notion/especificidade-class.png)
+![especificidade element](./img-notion/especificidade-element.png)
 
 - O efeito cascata **perde prioridade** e será priorizado a especificidade da declaração.
 
