@@ -26,3 +26,20 @@
 ![especificidade arquivo HTML](./img-notion/resultado-especificidade.png) 
 
 - caso os pesos sejam iguais (dois paragrafos sem especificação, por exemplo), a ultima alteração é a que conta (cascata)
+
+## Box Model 
+- Tudo são caixas!
+> Todos os elementos HTML serão considerados uma caixa
+
+- Caixas possuem determinadas propriedades
+> essas propriedades são o seu **conteúdo, largura, altura, borda, preenchimento (espaço interno), espaçamento (espaço externo)**. 
+
+![boxModel arquivo HTML](./img-notion/boxModel-arqv-html.png) 
+![boxModel arquivo CSS](./img-notion/boxModel-arqv-css.png) 
+
+- Ele aparece assim na web
+
+![boxModel resultado web](./img-notion/resultado-boxModel.png) 
+
+
+
