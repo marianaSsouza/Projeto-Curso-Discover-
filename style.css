@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*faz com que o padding e a borda sejam incluídos na largura e altura do elemento*/
+}
+
+
 body {
     background-image: url(./assets/bg-mobile.jpg);
     background-repeat: no-repeat; /*não repete a imagem*/
@@ -6,19 +13,53 @@ body {
    
 }
 
+
+body * {
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+}
+
 #container {
+
     width: 360px;
-    height: 712px;
-    margin: auto; /*centraliza o container*/
+    margin: 56px auto 0 auto; /*centraliza o container na tela*/
+
 }
 
 #profile {
     text-align: center; /*centraliza o conteúdo dentro do profile*/
-}
+    padding: 24px;
 
+}
 
 
 #profile img{ /*em hierarquia, esse seria como o "pai"*/
     width: 112px;
     
+}
+
+#profile p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 8px;
+
+}
+
+ul {
+    list-style: none; /*remove os marcadores da lista*/
+    display: flex;
+    flex-direction: column; /*alinha os itens da lista em coluna*/
+    gap: 16px; /*espaçamento entre os itens da lista*/
+}
+
+ul li {
+    display: flex;
+    justify-content: center; /*alinha o conteúdo no centro do item da lista*/
+    align-items: center; /*alinha o conteúdo verticalmente no centro do item da lista*/
+    padding: 16px 24px; /*espaçamento interno do item da lista*/
+    background-color: rgba(255, 255, 255, 0.1); /*cor de fundo com transparência*/
+    border: 1px solid rgba(255, 255, 255, 0.5); /*borda com transparência*/
+    border-radius: 10px; /*bordas arredondadas*/
+    backdrop-filter: blur(4px); /*efeito de desfoque no fundo*/
 }
