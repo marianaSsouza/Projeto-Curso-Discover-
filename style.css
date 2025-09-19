@@ -4,15 +4,31 @@
     box-sizing: border-box; /*faz com que o padding e a borda sejam incluídos na largura e altura do elemento*/
 }
 
-:root {
+:root { /*variáveis globais*/
+    /*tema padrão: dark mode*/
     --text-color: white;
-    --bg-url: url(./assets/bg-mobile.jpg)
+    --bg-url: url(./assets/bg-mobile.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.1);
+    --surface-color-hover: rgba(255, 255, 255, 0.05);
+    --highlight-color: rgba(255, 255, 255, 0.2);
+
+
+    --switch-bg-url: url(./assets/moon-stars.svg); /*variável para a imagem do botão de troca de tema*/
+
     
 }
 
-.light {
+.light { /*classe para o tema claro*/
     --text-color: black;
-    --bg-url: url(./assets/bg-mobile-light.jpg)
+    --bg-url: url(./assets/bg-mobile-light.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(255, 255, 255, 0.02);
+    --highlight-color: rgba(0, 0, 0, 0.1);
+
+    
+    --switch-bg-url: url(./assets/sun.svg); /*variável para a imagem do botão de troca de tema*/
 
 }
 
@@ -38,6 +54,9 @@ body * {
 
 }
 
+
+/*profile*/
+
 #profile {
     text-align: center; /*centraliza o conteúdo dentro do profile*/
     padding: 24px;
@@ -58,6 +77,54 @@ body * {
 
 }
 
+/*switch*/
+
+#switch {
+    position: relative; /*faz com que o span dentro do switch seja posicionado em relação ao switch*/
+    width: 64px;
+
+    margin: 4px auto; /*centraliza o switch na tela*/
+    
+}
+
+#switch button{
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-url) no-repeat center; /*adiciona a imagem ao botão*/
+    border: 0;
+    border-radius: 50%; /*deixa o botão arredondado, formando um circulo perfeito*/
+
+    position: absolute; /*faz com que o botão saia do fluxo normal do layout, permitindo posicioná-lo em relação ao seu container pai*/
+    top: 50%; /*alinha o botão verticalmente ao centro do container pai*/
+    left: 0; /*alinha o botão à esquerda do container pai*/
+    z-index: 1; /*faz com que o botão fique acima do span*/
+    transform: translateY(-50%); /*centraliza o botão verticalmente em relação ao seu ponto médio*/
+
+}
+
+
+.light #switch button{
+    right: 0; /*remove o alinhamento à direita*/
+    left: inicial; /*alinha o botão à esquerda do container pai*/
+}
+
+#switch span{
+    display: block; /*faz com que o span se comporte como um bloco, ocupando toda a largura disponível*/
+
+
+    width: 64px;
+    height: 24px;
+
+    background: var(--surface-color); /*cor de fundo com transparência*/
+    border: 1px solid var(--stroke-color); /*borda com transparência*/
+    border-radius: 9999px; /*bordas arredondadas, formando um oval*/
+    backdrop-filter: blur(4px); /*efeito de desfoque no fundo*/
+
+}
+
+
+
+
 ul {
     list-style: none; /*remove os marcadores da lista*/
     display: flex; /*deixa os itens um ao lado do outro*/
@@ -77,8 +144,8 @@ ul li a{
     padding: 16px 24px; /*espaçamento interno do item da lista*/
 
     /*mexendo na cor e outros estilos dos botões*/
-    background-color: rgba(255, 255, 255, 0.1); /*cor de fundo com transparência*/
-    border: 1px solid rgba(255, 255, 255, 0.5); /*borda com transparência*/
+    background-color: var(--surface-color); /*cor de fundo com transparência*/
+    border: 1px solid var(--stroke-color); /*borda com transparência*/
     border-radius: 10px; /*bordas arredondadas*/
     backdrop-filter: blur(4px); /*efeito de desfoque no fundo*/
     text-decoration: none; /*remove o sublinhado do link*/
@@ -89,8 +156,8 @@ ul li a{
 
 /*pseudo-selector > é o efeito que acontece quando passamos o mouse por cima do botão*/
 ul li a:hover{
-    background: rgba(255, 255, 255, 0.05); /*cor de fundo com transparência ao passar o mouse*/
-    border: 1.5 px var(--text-color); /*borda branca ao passar o mouse*/
+    background: var(--surface-color-hover); /*cor de fundo com transparência ao passar o mouse*/
+    border: 1.5px var(--text-color); /*borda branca ao passar o mouse*/
 }
 
 #social-links {
@@ -118,10 +185,10 @@ ul li a:hover{
 }
 
 #social-links a:hover{
-    background:rgba(255, 255, 255, 0.2); /*cor de fundo com transparência ao passar o mouse*/
+    background: var(--highlight-color); /*cor de fundo com transparência ao passar o mouse*/
 }
 
-footer {
+footer { /*rodapé*/
    padding: 24px 0; /*espaçamento interno do rodapé*/
    text-align: center; /*centraliza o conteúdo dentro do rodapé*/
    font-size: 14px; /*tamanho da fonte do rodapé*/
