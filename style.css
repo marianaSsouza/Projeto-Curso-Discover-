@@ -48,12 +48,10 @@ body * {
 }
 
 #container {
-
     width: 360px;
     margin: 56px auto 0 auto; /*centraliza o container na tela*/
-
+    padding: 0 24px;
 }
-
 
 /*profile*/
 
@@ -82,7 +80,6 @@ body * {
 #switch {
     position: relative; /*faz com que o span dentro do switch seja posicionado em relação ao switch*/
     width: 64px;
-
     margin: 4px auto; /*centraliza o switch na tela*/
     
 }
@@ -99,13 +96,15 @@ body * {
     left: 0; /*alinha o botão à esquerda do container pai*/
     z-index: 1; /*faz com que o botão fique acima do span*/
     transform: translateY(-50%); /*centraliza o botão verticalmente em relação ao seu ponto médio*/
+    transition: transform 0.3s; /*transição suave para o efeito de troca de tema*/
+    
 
 }
 
 
 .light #switch button{
-    right: 0; /*remove o alinhamento à direita*/
-    left: inicial; /*alinha o botão à esquerda do container pai*/
+    right: 0;
+    left: initial;
 }
 
 #switch span{
