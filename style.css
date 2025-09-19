@@ -103,10 +103,16 @@ ul li a:hover{
     transition: background 0.2s; /*transição suave para o efeito de hover*/
     border-radius: 50%; /*deixa o fundo do ícone arredondado, formando um circulo perfeito*/
 
-    
 }
 
 #social-links a:hover{
     background:rgba(255, 255, 255, 0.2); /*cor de fundo com transparência ao passar o mouse*/
+}
+
+footer {
+   padding: 24px 0; /*espaçamento interno do rodapé*/
+   text-align: center; /*centraliza o conteúdo dentro do rodapé*/
+   font-size: 14px; /*tamanho da fonte do rodapé*/
+
 }
 
