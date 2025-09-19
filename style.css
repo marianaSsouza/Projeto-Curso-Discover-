@@ -4,9 +4,21 @@
     box-sizing: border-box; /*faz com que o padding e a borda sejam incluídos na largura e altura do elemento*/
 }
 
+:root {
+    --text-color: white;
+    --bg-url: url(./assets/bg-mobile.jpg)
+    
+}
+
+.light {
+    --text-color: black;
+    --bg-url: url(./assets/bg-mobile-light.jpg)
+
+}
+
 
 body {
-    background-image: url(./assets/bg-mobile.jpg);
+    background-image: var(--bg-url); /*usa a variável de imagem definida no :root*/
     background-repeat: no-repeat; /*não repete a imagem*/
     background-position: top center; /*centraliza a imagem*/
     background-size: cover; /*cobre toda a tela*/
@@ -16,7 +28,7 @@ body {
 
 body * {
     font-family: 'Inter', sans-serif;
-    color: #ffffff;
+    color: var(--text-color); /*usa a variável de cor definida no :root*/
 }
 
 #container {
@@ -78,7 +90,7 @@ ul li a{
 /*pseudo-selector > é o efeito que acontece quando passamos o mouse por cima do botão*/
 ul li a:hover{
     background: rgba(255, 255, 255, 0.05); /*cor de fundo com transparência ao passar o mouse*/
-    border: 1.5 px solid white; /*borda branca ao passar o mouse*/
+    border: 1.5 px var(--text-color); /*borda branca ao passar o mouse*/
 }
 
 #social-links {
